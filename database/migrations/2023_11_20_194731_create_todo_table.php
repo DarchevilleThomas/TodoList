@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('todo', function (Blueprint $table) {
             $table->id();
             $table->string('tache');
-            $table->string('description');
+            $table->string('description')->nullable();
             $table->boolean('fini');
             $table->dateTime('dateDeFin');
         });
