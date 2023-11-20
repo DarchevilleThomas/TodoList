@@ -13,7 +13,10 @@ return new class extends Migration
     {
         Schema::create('todo', function (Blueprint $table) {
             $table->id();
-            $table->timestamps();
+            $table->string('tache');
+            $table->string('description');
+            $table->boolean('fini');
+            $table->dateTime('dateDeFin');
         });
     }
 
