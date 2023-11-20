@@ -9,6 +9,8 @@
 </head>
 <body>
 
+<h1>Liste de tâches</h1>
+
 <table>
     <thead>
     <tr>
