@@ -2,13 +2,14 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Todo;
+use App\Models\Todos;
 use Illuminate\Http\Request;
+use Illuminate\View\View;
 
 class TodoController extends Controller
 {
     public function index(){
-        $todos = Todo::all();
+        $todos = Todos::all();
         return view('todolist',['todos' => $todos]);
     }
 }

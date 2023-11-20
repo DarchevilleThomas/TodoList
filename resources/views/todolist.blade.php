@@ -11,8 +11,7 @@
 
 <h1>Liste de tâches</h1>
 
-for
-
+@if(!\PHPUnit\Framework\isEmpty($todos))
 <table>
     <thead>
     <tr>
@@ -21,6 +20,7 @@ for
         <th>Date de fin</th>
     </tr>
     </thead>
+
     <tbody>
     @foreach($todos as $todo)
     <tr>
@@ -31,6 +31,8 @@ for
     @endforeach
     </tbody>
 </table>
-
+@else
+    <h2>Liste vide !</h2>
+@endif
 </body>
 </html>
