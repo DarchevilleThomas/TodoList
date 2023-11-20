@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 class TodoController extends Controller
 {
     public function index(){
-        $todo = Todo::all();
-        return view('todolist',['todo' => $todo]);
+        $todos = Todo::all();
+        return view('todolist',['todos' => $todos]);
     }
 }
