@@ -16,7 +16,7 @@ return new class extends Migration
             $table->string('tache');
             $table->string('description')->nullable();
             $table->boolean('fini');
-            $table->dateTime('dateDeFin');
+            $table->dateTime('dateDeFin')->nullable();
         });
     }
 
@@ -25,6 +25,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('todo');
+        Schema::dropIfExists('todos');
     }
 };

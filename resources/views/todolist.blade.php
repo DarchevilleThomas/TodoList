@@ -11,7 +11,10 @@
 
 <h1>Liste de tâches</h1>
 
-@if(!\PHPUnit\Framework\isEmpty($todos))
+<a href="/ajouter"><h2>Ajout de tâche</h2></a>
+<a href="/delete"><h2>Tout supprimer</h2></a>
+
+@if($todos)
 <table>
     <thead>
     <tr>
