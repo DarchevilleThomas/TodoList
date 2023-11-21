@@ -16,7 +16,7 @@ return new class extends Migration
             $table->string('tache');
             $table->string('description')->nullable();
             $table->boolean('fini');
-            $table->dateTime('dateDeFin')->nullable();
+            $table->date('dateDeFin')->nullable();
         });
     }
 

@@ -18,8 +18,4 @@ class Todos extends Model
         'dateDeFin'
     ];
 
-    protected $casts = [
-        'dateDeFin' => 'datetime'
-    ];
-
 }

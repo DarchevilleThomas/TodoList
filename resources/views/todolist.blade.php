@@ -30,6 +30,7 @@
         <td>{{$todo['tache']}}</td>
         <td>{{$todo['fini']}}</td>
         <td>{{$todo['dateDeFin']}}</td>
+        <td>{{$todo['id']}}</td>
     </tr>
     @endforeach
     </tbody>
