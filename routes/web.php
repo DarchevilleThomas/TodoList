@@ -13,6 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [\App\Http\Controllers\TodoController::class,'index']);
+Route::get('/ajouter', [\App\Http\Controllers\TodoController::class,'ajouter']);
+Route::get('/delete', [\App\Http\Controllers\TodoController::class,'deleteAll']);
+Route::post('/ajouter/traitement', [\App\Http\Controllers\TodoController::class,'ajouterTraitement']);
