@@ -17,3 +17,5 @@ Route::get('/', [\App\Http\Controllers\TodoController::class,'index']);
 Route::get('/ajouter', [\App\Http\Controllers\TodoController::class,'ajouter']);
 Route::get('/delete', [\App\Http\Controllers\TodoController::class,'deleteAll']);
 Route::post('/ajouter/traitement', [\App\Http\Controllers\TodoController::class,'ajouterTraitement']);
+
+Route::get('/edit/{id?}',[\App\Http\Controllers\TodoController::class,'edit']);

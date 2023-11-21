@@ -18,6 +18,9 @@
 
 <h1>Liste de tâches</h1>
 
+@if (session('status'))
+    <div> {{session('status')}}</div>
+@endif
 <a href="/ajouter"><h2>Ajout de tâche</h2></a>
 <a href="/delete"><h2>Tout supprimer</h2></a>
 

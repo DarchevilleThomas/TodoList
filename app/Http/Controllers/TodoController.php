@@ -32,4 +32,10 @@ class TodoController extends Controller
         return redirect('/')->with('status','Tout a était supprimé !');
     }
 
+    public function edit($id = -1){
+        $todo = Todos::all()->find($id);
+        if($todo==null) return redirect('/')->with('status',"Vous ne pouvez pas editer une tâche qui n'exite pas");;
+        return $todo;
+    }
+
 }
