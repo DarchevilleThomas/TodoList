@@ -46,9 +46,9 @@
         <td>{{$todo['tache']}}</td>
         <td>{{$todo['dateDeFin']}}</td>
         @if($todo['fini']==0)
-            <td><a href="/"><div class="false"></div></a></td>
+            <td><a href="/activate/{{$todo['id']}}"><div class="false"></div></a></td>
         @else
-            <td><a href="/"><div class="true"></div></a></td>
+            <td><a href="/activate/{{$todo['id']}}"><div class="true"></div></a></td>
         @endif
         <td><a href="/edit/{{$todo['id']}}">Editer</a></td>
     </tr>

@@ -56,4 +56,11 @@ class TodoController extends Controller
         return redirect("/edit/{$infos['id']}")->with('success','La tache a bien été mise à jour !');
     }
 
+    public function activate($id){
+        $todo = Todos::all()->find($id);
+        if($todo["fini"]==0) $todo["fini"]=1;
+        else $todo["fini"]=0;
+        $todo->save();
+        return redirect('/');
+    }
 }

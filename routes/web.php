@@ -20,3 +20,5 @@ Route::post('/ajouter/traitement', [\App\Http\Controllers\TodoController::class,
 
 Route::get('/edit/{id}',[\App\Http\Controllers\TodoController::class,'edit']);
 Route::post('/edit/traitement',[\App\Http\Controllers\TodoController::class,'editTraitement']);
+
+Route::get('/activate/{id}',[\App\Http\Controllers\TodoController::class,'activate']);
