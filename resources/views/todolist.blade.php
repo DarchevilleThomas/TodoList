@@ -24,7 +24,7 @@
 <a href="/ajouter"><h2>Ajout de tâche</h2></a>
 <a href="/delete"><h2>Tout supprimer</h2></a>
 
-@if($todos)
+@if(sizeof($todos)>0)
 <table>
     <thead>
     <tr>
