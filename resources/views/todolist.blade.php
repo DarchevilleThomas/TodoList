@@ -19,8 +19,9 @@
     <thead>
     <tr>
         <th>Nom de la Tâche</th>
-        <th>Réalisée ou non</th>
         <th>Date de fin</th>
+        <th>Réalisée ou non</th>
+        <th>Action</th>
     </tr>
     </thead>
 
@@ -28,9 +29,13 @@
     @foreach($todos as $todo)
     <tr>
         <td>{{$todo['tache']}}</td>
-        <td>{{$todo['fini']}}</td>
         <td>{{$todo['dateDeFin']}}</td>
-        <td>{{$todo['id']}}</td>
+        @if($todo['fini']==0)
+            <td><input type="checkbox" name="test" id="" href="/ajouter"></td>
+        @else
+            <td><input type="checkbox" name="test" id="" checked></td>
+        @endif
+        <td><a href="/edit/{{$todo['id']}}">Editer</a></td>
     </tr>
     @endforeach
     </tbody>
