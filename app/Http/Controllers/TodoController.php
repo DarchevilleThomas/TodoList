@@ -38,4 +38,22 @@ class TodoController extends Controller
         return \view('editer',['todo' => $todo]);
     }
 
+    public function editTraitement(Request $request){
+        $infos = $request->all();
+        if ($infos['tache']==null) return redirect("/edit/{$infos['id']}")->with('status',"Erreur ! La tache n'a pas été modifiée car le nom de tâche n'est pas renseignée ! ");
+        $id = $infos['id'];
+        if (!array_key_exists('fini',$infos)) $infos['fini']=0;
+        else $infos['fini']=1;
+        $liste = [
+            'tache'=>$infos['tache'],
+            'description'=>$infos['description'],
+            'dateDeFin'=>$infos['dateDeFin'],
+            'fini'=>$infos['fini'],
+        ];
+        foreach (array_keys($liste) as $attribut){
+            DB::update("UPDATE todos SET {$attribut}='{$liste[$attribut]}' WHERE id={$id}");
+        }
+        return redirect("/edit/{$infos['id']}")->with('success','La tache a bien été mise à jour !');
+    }
+
 }

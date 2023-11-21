@@ -22,8 +22,13 @@
     <div> {{session('status')}}</div>
 @endif
 
+@if (session('success'))
+    <div> {{session('success')}}</div>
+@endif
+
 <form action="/edit/traitement" method="POST">
     @csrf
+    <input type="text" name="id" value="{{$todo['id']}}" hidden>
     <label>Nom de la tâche</label>
     <input type="text" name="tache" value="{{$todo['tache']}}">
     <label>Description</label>
