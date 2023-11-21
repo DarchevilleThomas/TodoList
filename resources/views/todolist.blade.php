@@ -6,6 +6,13 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Todo List</title>
+    <style>
+        .test{
+            background-color: red;
+            width: 50px;
+            height: 50px;
+        }
+    </style>
 </head>
 <body>
 
@@ -31,9 +38,9 @@
         <td>{{$todo['tache']}}</td>
         <td>{{$todo['dateDeFin']}}</td>
         @if($todo['fini']==0)
-            <td><input type="checkbox" name="test" id="" href="/ajouter"></td>
+            <td><a href="/"><div class="test"></div></a></td>
         @else
-            <td><input type="checkbox" name="test" id="" checked></td>
+            <td><a href="/"><div class="test"></div></a></td>
         @endif
         <td><a href="/edit/{{$todo['id']}}">Editer</a></td>
     </tr>
