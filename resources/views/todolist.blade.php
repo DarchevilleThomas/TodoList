@@ -26,7 +26,7 @@
 <h1>Liste de tâches</h1>
 
 @if (session('status'))
-    <div> {{session('status')}}</div>
+    <div class="alert alert-success mx-5"> {{session('status')}}</div>
 @endif
 <div>
 
