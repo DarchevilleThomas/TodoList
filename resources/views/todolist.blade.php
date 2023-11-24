@@ -35,7 +35,7 @@
 </div>
 </div>
 @if(sizeof($todos)>0)
-<table>
+<table class="table">
     <thead>
     <tr>
         <th>Nom de la Tâche</th>
