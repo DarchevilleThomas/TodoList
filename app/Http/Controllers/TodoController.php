@@ -27,9 +27,16 @@ class TodoController extends Controller
         return redirect('/ajouter')->with('status','La tâche a bien été ajoutée avec succès !');
     }
 
-    public function deleteAll(){
-        DB::delete("DELETE FROM todos");
-        return redirect('/')->with('status','Tout a été supprimé !');
+    public function delete( $id = null){
+        if ($id==null){
+            DB::delete("DELETE FROM todos");
+            return redirect('/')->with('status','Tout a été supprimé !');
+        }
+        else {
+            $todo = Todos::find($id);
+            $todo->delete();
+            return redirect('/')->with('status', "La tâche '$todo->tache' a été supprimée");
+        }
     }
 
     public function edit($id = -1){
