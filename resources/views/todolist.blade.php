@@ -55,7 +55,7 @@
         @else
             <td><a href="/activate/{{$todo['id']}}"><div class="true"></div></a></td>
         @endif
-        <td><a href="/edit/{{$todo['id']}}" class="btn btn-primary">Editer</a></td>
+        <td><a href="/edit/{{$todo['id']}}" class="btn btn-primary">Editer</a> <a href="/delete/{{$todo['id']}}" class="btn btn-danger">Supprimer</a></td>
     </tr>
     @endforeach
     </tbody>

@@ -29,7 +29,7 @@ class TodoController extends Controller
 
     public function deleteAll(){
         DB::delete("DELETE FROM todos");
-        return redirect('/')->with('status','Tout a était supprimé !');
+        return redirect('/')->with('status','Tout a été supprimé !');
     }
 
     public function edit($id = -1){
