@@ -5,7 +5,7 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Todo List</title>
+    <title>Todo List - Afficher</title>
     <style>
         .false{
             background-color: red;
@@ -23,7 +23,7 @@
 <body>
 
 <div class="text-center">
-<h1>Liste de tâches</h1>
+<h1 class="text-primary">Liste de tâches</h1>
 
 @if (session('status'))
     <div class="alert alert-success mx-5"> {{session('status')}}</div>
