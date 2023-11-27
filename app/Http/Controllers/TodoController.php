@@ -41,7 +41,7 @@ class TodoController extends Controller
 
     public function edit($id = -1){
         $todo = Todos::all()->find($id);
-        if($todo==null) return redirect('/')->with('status',"Vous ne pouvez pas editer une tâche qui n'exite pas");;
+        if($todo==null) return redirect('/')->with('errors',"Vous ne pouvez pas editer une tâche qui n'exite pas");;
         return \view('editer',['todo' => $todo]);
     }
 

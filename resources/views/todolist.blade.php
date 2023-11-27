@@ -28,6 +28,9 @@
 @if (session('status'))
     <div class="alert alert-success mx-5"> {{session('status')}}</div>
 @endif
+@if (session('errors'))
+    <div class="alert alert-danger mx-5"> {{session('errors')}}</div>
+@endif
 <div>
 
 <a href="/ajouter" class="btn btn-success btn-sm me-3"><h3>Ajout de tâche</h3></a>
