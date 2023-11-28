@@ -63,6 +63,7 @@
     @endforeach
     </tbody>
 </table>
+{{$todos->onEachSide(1)->links()}}
 @else
     <h2>Liste vide !</h2>
 @endif
