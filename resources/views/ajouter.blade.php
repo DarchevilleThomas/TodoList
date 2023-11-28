@@ -28,7 +28,7 @@
     </div>
     <div class="row mb-3">
     <label>Description</label>
-        <textarea type="text" name="description"> </textarea>
+        <textarea type="text" name="description" rows="5"> </textarea>
     </div>
     <div class="row mb-3">
         <label>Date de fin</label>
