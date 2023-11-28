@@ -24,7 +24,7 @@ class TodoController extends Controller
         if ($infos['tache']==null) return redirect('/ajouter')->with('errors',"Erreur ! La tache n'a pas été ajoutée car le nom de tâche n'est pas renseignée ! ");
 
         DB::insert("INSERT INTO todos (tache,description,fini,dateDeFin) VALUES (?,?,?,?)",[$infos['tache'],$infos['description'],false,$infos['dateDeFin']]);
-        return redirect('/ajouter')->with('status','La tâche a bien été ajoutée avec succès !');
+        return redirect('/ajouter')->with('status',"La tâche '{$infos['tache']}' a bien été ajoutée avec succès !");
     }
 
     public function delete( $id = null){
