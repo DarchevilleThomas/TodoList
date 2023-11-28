@@ -20,7 +20,7 @@
     </style>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 </head>
-<body>
+<body class="text-center">
 
 <div class="text-center">
 <h1 class="text-primary">Liste de tâches</h1>
@@ -54,9 +54,9 @@
         <td>{{$todo['tache']}}</td>
         <td>{{$todo['dateDeFin']}}</td>
         @if($todo['fini']==0)
-            <td><a href="/activate/{{$todo['id']}}"><div class="false"></div></a></td>
+            <td><a href="/activate/{{$todo['id']}}"><div class="false mx-auto" ></div></a></td>
         @else
-            <td><a href="/activate/{{$todo['id']}}"><div class="true"></div></a></td>
+            <td><a href="/activate/{{$todo['id']}}"><div class="true mx-auto"></div></a></td>
         @endif
         <td><a href="/edit/{{$todo->id}}" class="btn btn-primary">Éditer</a> <a href="/delete/{{$todo['id']}}" class="btn btn-danger">Supprimer</a></td>
     </tr>

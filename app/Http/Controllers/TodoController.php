@@ -10,7 +10,7 @@ use Illuminate\View\View;
 class TodoController extends Controller
 {
     public function index(){
-        $todos = Todos::all();
+        $todos = Todos::paginate(10);
         return view('todolist',['todos' => $todos]);
     }
 
